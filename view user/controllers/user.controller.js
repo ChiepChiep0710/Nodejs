@@ -7,7 +7,7 @@ module.exports.index=function(req,res){
 };
 module.exports.search=function(req, res){
     var q=req.query.q;
-    var matchedUsers= db.get('users').value().filter(function(user){// filter tên user 
+    var matchedUsers= db.get('users').value().filter(function(user){
         return user.name.indexOf(q) !== -1;
     });
     res.render('users/index',{
@@ -27,6 +27,20 @@ module.exports.id=function(req,res){
 }
 module.exports.postCreate=function(req,res){
     req.body.id= shortId.generate();                // tự tạo id ngẫu nhiên
+    var errors=[];
+    if(!req.body.name){
+        errors.push('Name iss required')
+    }
+    if(!req.body.phone){
+        errors.push('phone is required')
+    }
+    if (errors.length){
+        res.render('users/create',{
+            errors: errors,
+            value : req.body
+        });
+        return;
+    }
     db.get('users').push(req.body).write();
     res.redirect('/users')
 };
