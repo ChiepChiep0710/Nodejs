@@ -1,5 +1,8 @@
 h1 creat user
 
+if errors
+  each error in errors
+    p #{error}
 
 form(action="/users/create", method="POST")
   label Name 

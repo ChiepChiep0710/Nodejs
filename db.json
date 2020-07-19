@@ -33,10 +33,6 @@
       "id": "_TR7P_Q71"
     },
     {
-      "phone": "123",
-      "id": "oJ5r6hcjs"
-    },
-    {
       "name": "Chiep Chiep",
       "phone": "123",
       "id": "q5YPiz9BS"
@@ -64,7 +60,19 @@
     {
       "name": "Nguyễn Mạnh Hiếu",
       "phone": "0766356056",
-      "id": "09ppHJNKJ"
+      "id": "09ppHJNKJ",
+      "email": "hieu@gmail.com",
+      "password": "123456"
+    },
+    {
+      "name": "Hieu",
+      "phone": "123",
+      "id": "hRdkFrHh1"
+    },
+    {
+      "name": "123",
+      "phone": "23",
+      "id": "fEK01a6xf"
     }
   ]
 }

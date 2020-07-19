@@ -1,0 +1,14 @@
+h1 login 
+
+if errors
+  each error in errors
+    p #{error}
+
+
+
+form( method="POST")
+  label email;
+  input(name="email", type="text")
+  label password
+  input(name="password", type="text")
+  button login

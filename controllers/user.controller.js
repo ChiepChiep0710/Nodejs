@@ -37,7 +37,7 @@ module.exports.postCreate=function(req,res){
     if (errors.length){
         res.render('users/create',{
             errors: errors,
-            value : req.body
+            value : req.body,
         });
         return;
     }
